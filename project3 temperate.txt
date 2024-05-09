@@ -1,0 +1,78 @@
+Q.1 Write a Program to print all alphabets from a to z by skipping 3 alphabets using do do-while
+loop.
+For example,
+Output:
+a, e, i, m, q, u, y
+Ans:
+
+// Online C compiler to run C program online
+#include <stdio.h>
+int main() {
+//for loop
+// for (char ch='a';ch<='z';ch+=4){
+// printf("%c\n",ch);
+// }
+char ch='a';
+do{
+printf("%c,",ch);
+ch+=4;
+}while(ch<='z');
+}
+o/p
+a,e,i,m,q,u,y,
+=== Code Execution Successful ===
+
+
+
+Q.2 Write a Program to count the total number of digits in a number.
+For example,
+
+Input:
+Enter any number: 752
+Output:
+Total number of digits: 3
+Ans:
+#include <stdio.h>
+int main() {
+int n;
+int i=0;
+printf("enter any number :");
+scanf("%d",&n);
+do{
+n/=10;
+i++;
+}while (n!=0);
+printf("nuber of digits:%d",i);
+}
+o/p
+enter any number :752
+nuber of digits:3
+=== Code Execution Successful ===
+
+
+Q.3 Write a Program to find the sum of the first and the last digit of a number.
+For example,
+
+Input:
+Enter any number: 384
+Output:
+The sum of the first and the last digit: 7
+Ans:
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+int num, sum, digits, firstDigit, lastDigit;
+sum = 0;
+printf("Enter any number to find sum of first and last digit: ");
+scanf("%d", &num);
+lastDigit = num % 10;
+digits = (int) log10(num);
+firstDigit = (int) (num / pow(10, digits));
+sum = firstDigit + lastDigit;
+printf("Sum of first and last digit = %d", sum);
+return 0;
+}
+o/p
+Enter any number to find sum of first and last digit: 384
+Sum of first and last digit = 7
